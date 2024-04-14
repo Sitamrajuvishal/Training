@@ -1,0 +1,60 @@
+Q. Function that returns the Factorial of a number
+
+
+Function Name: fact
+
+Parameters:
+
+i. Input: integer n (the number for which factorial is to be calculated)
+
+ii. Output: integer (the factorial of the input number)
+
+Pseudocode:
+
+function fact(n):
+    if n equals 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+Explanation:
+
+This function calculates the factorial of a given number recursively. If the input number is 0, the function returns 1 (since the factorial of 0 is 1). Otherwise, it multiplies the input number by the factorial of the previous number (n-1) until it reaches 0.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q. Function to Calculate the Fibonacci series of n numbers:
+
+Function Name: fib
+
+Parameters:
+
+Input: integer n (the position of the Fibonacci number to be calculated)
+
+Output: integer (the nth Fibonacci number)
+Pseudocode:
+
+kotlin
+Copy code
+function fib(n):
+   if n<=1
+        return n
+    else:
+        print(fibonacci(n-1) + fibonacci(n-2))
+
+Explanation:
+
+This function calculates the nth Fibonacci number recursively. If the input position is 0, the function returns 0. If the input position is 1, the function returns 1. For any other position, the function prints the sum of the Fibonacci numbers at positions (n-1) and (n-2).
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q. Benefits of Modularity in Programming:
+
+Modularity in programming refers to the practice of breaking down a program into smaller, self-contained modules or functions. The following are some of the advantages of Modularity in Programming:-
+
+1. Code Reusability: Modular functions can be reused in different parts of a program or even in different programs altogether. For example, the factorial function designed above can be used in various mathematical calculations across multiple projects without the need to rewrite the code.
+
+2. Ease of Maintenance: When a program is modular, each function handles a specific task or functionality. This makes it easier to locate and fix bugs or make enhancements to the codebase without affecting other parts of the program.
+
+3. Improved Readability: Modular programming promotes a clear and organized code structure. Each module or function focuses on a single task, making the code easier to understand for both the original developer and others who may need to review or work with the code in the future.
+
+4. Scalability: As a program grows in complexity, modular design allows for easier scaling by adding new modules or modifying existing ones as needed. This makes the codebase more flexible and adaptable to changing requirements or future expansion.

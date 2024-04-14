@@ -1,0 +1,47 @@
+
+//Please View In Full Screen 
+
+Psuedocode:
+function bubbleSort(arr):
+    n = length of arr
+    for i from 0 to n-1:
+        swapped = false
+        for j from 0 to n-i-1:
+            if arr[j] > arr[j+1]:
+                swap arr[j] and arr[j+1]
+                swapped = true
+        if swapped is false:
+            // If no two elements were swapped in the inner loop, the array is already sorted
+            break
+
+Explanation:
+
+1. Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
+2. In each iteration, the largest element bubbles up to its correct position.
+3. The algorithm maintains a boolean variable swapped to keep track of whether any elements were swapped in the inner loop. If no elements were swapped in a pass through the list, it means the list is already sorted, and the algorithm can terminate early.
+4. The outer loop controls the number of passes through the list, and the inner loop performs the comparisons and swaps.
+
+
+Dry Run:
+
+Example Array:  int arr[] = {6,0,3,5}
+
+First Pass:   for i=0,j=0    6   0   3   5  (6, 0 elements are being swapped)  (swapped = true)  
+	 		     |___|
+
+	      for i=0,j=1    0   6   3   5  (6, 3 elements are being swapped)  (swapped = true)
+				 |___|
+
+	      for i=0,j=2    0   3   6   5  (6,5 elements are being swapped)   (swapped = true)
+				     |___|	
+
+
+
+Second Pass   for i=1,j=0    0   3   5   6  (elements are not swapped, since arr[j]<arr[j+1])   (swapped = false)
+			     |___|
+
+	      for i=1,j=1    0   3   5   6  (elements are not swapped, since arr[j]<arr[j+1])   (swapped = false)
+				 |___|
+
+	      for i=1,j=2    0   3   5   6  (elements are not swapped, since arr[j]<arr[j+1])   (swapped = false)
+				     |___|

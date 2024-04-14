@@ -1,0 +1,23 @@
+//Take the input
+print("Enter a number:")
+inputNumber = readInput()
+
+//Intialize the result to zero
+result equals 0
+
+// Check if the input is a valid number
+if inputNumber is not a number:
+    print("Invalid input. Please enter a valid number.")
+    exit the program
+
+// Check if the inputNumber is even or odd using modulous operation
+if (inputNumber%2) equals 0:
+    // If the number is even, calculate the square
+    result = inputNumber * inputNumber
+else:
+    // If the number is odd, calculate the cube
+    result = number * number * number
+    
+
+//Display the result
+print(result)
