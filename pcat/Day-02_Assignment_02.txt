@@ -1,0 +1,46 @@
+Q. Pseudocode for recrusive function that generates fibonacchi series.
+ 
+function fib(int n)
+	if(n<=1) 
+		print n
+	else
+		print fib(n-1) + fib(n-2)
+
+Q. Efficeny Analysis
+
+The recursive approach has a time complexity of O(2^n). This is because each call to Fibonacci(n) results in two more calls, leading to an exponential growth in the number of calls. The space complexity is O(n) due to the maximum depth of the call stack being n during the recursive calls.
+
+Q. Comparision of iterative and recrusion.
+
+
+Time Complexity:
+
+Recursive: O(2^n), due to exponential growth in function calls.
+Iterative: O(n), as it simply iterates through n once.
+
+Space Complexity:
+
+Recursive: O(n), because of the call stack depth in recursion.
+Iterative: O(1), as it uses a constant amount of space.
+
+Q. Pro's and Con's of recursive and iterative approaches.
+
+Recursive Approach:
+
+Pros:
+1. Conceptually simpler and easier to implement.
+2. More straightforward to read and understand for those familiar with recursion.
+
+Cons:
+1. Inefficient for large values of n due to exponential time complexity.
+2. Can lead to stack overflow for very large n because of deep recursion.
+
+Iterative Approach:
+
+Pros:
+1. Much more efficient in terms of time complexity (O(n)).
+2. Uses constant space, making it more space-efficient.
+
+Cons:
+1. Slightly more complex to understand at first glance compared to the recursive approach.
+2. Requires manual management of the previous states.
