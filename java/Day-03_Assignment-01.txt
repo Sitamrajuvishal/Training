@@ -1,5 +1,5 @@
 Q. Write a program that declares two integer variables, swaps their values without using a third variable, and prints the result.
-in java
+
 
 
 import java.util.Scanner;
