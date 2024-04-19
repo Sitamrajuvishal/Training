@@ -1,0 +1,18 @@
+Q. Write a recursive function named SumArray that calculates and returns the sum of elements in an array, demonstarte with example.
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 5};
+        System.out.println("Sum of array elements: " + sumArray(array, 0));
+    }
+
+    public static int sumArray(int[] arr, int index) {
+        if (index == arr.length - 1) {
+            return arr[index]; // Base case: return the last element when the index reaches the end of the array
+        } else {
+            return arr[index] + sumArray(arr, index + 1); // Add current element to sum of rest of the array
+        }
+    }
+}
