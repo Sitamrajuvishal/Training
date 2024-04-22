@@ -1,0 +1,48 @@
+Q. Write a method that takes two strings, concatenates them, reverses the result, and then extracts the middle substring of the given length. Ensure your method handles edge cases, such as an empty string or a substring length larger than the concatenated string.
+
+public class MiddleSubstringExtractor {
+
+    public static String getMiddleSubstring(String str1, String str2, int length) {
+        // Concatenate the two strings
+        String combinedStr = str1 + str2;
+
+        // Reverse the concatenated string
+        String reversedStr = reverseString(combinedStr);
+
+        // Calculate the middle index
+        int middleIndex = reversedStr.length() / 2;
+
+        // Ensure length is not greater than the length of the reversed string
+        length = Math.min(length, reversedStr.length());
+
+        // Extract the middle substring
+        int startIndex = middleIndex - length / 2;
+        StringBuilder middleSubstring = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            middleSubstring.append(reversedStr.charAt(startIndex + i));
+        }
+
+        return middleSubstring.toString();
+    }
+
+    // Method to reverse a string
+    public static String reverseString(String str) {
+        char[] chars = str.toCharArray();
+        int left = 0, right = str.length() - 1;
+        while (left < right) {
+            char temp = chars[left];
+            chars[left] = chars[right];
+            chars[right] = temp;
+            left++;
+            right--;
+        }
+        return new String(chars);
+    }
+
+    public static void main(String[] args) {
+        // Test cases
+        System.out.println(getMiddleSubstring("hello", "world", 3)); // Should output "lrow"
+        System.out.println(getMiddleSubstring("abc", "def", 5)); // Should output "fedcb"
+        System.out.println(getMiddleSubstring("", "", 2)); // Should output an empty string
+    }
+}

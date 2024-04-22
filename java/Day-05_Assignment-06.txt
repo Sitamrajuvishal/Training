@@ -1,0 +1,19 @@
+Q. Write a program that attempts to divide by zero, catches the ArithmeticException, and provides a custom error message.
+
+public class DivideByZeroExample {
+    public static void main(String[] args) {
+        try {
+            divideByZero();
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Division by zero is not allowed.");
+        }
+    }
+
+    public static void divideByZero() {
+        int numerator = 10;
+        int denominator = 0;
+
+        int result = numerator / denominator;
+        System.out.println("Result of division: " + result);
+    }
+}

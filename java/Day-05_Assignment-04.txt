@@ -1,0 +1,45 @@
+Q. Create a Shape class with a method area() and extend it with Circle and Rectangle classes overriding the area() method appropriately.
+
+public class Shape {
+    public double area() {
+        return 0.0; // Default implementation returns 0 for undefined shapes
+    }
+}
+
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+
+class Rectangle extends Shape {
+    private double width;
+    private double height;
+
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    @Override
+    public double area() {
+        return width * height;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle(5);
+        System.out.println("Area of circle: " + circle.area());
+
+        Rectangle rectangle = new Rectangle(4, 6);
+        System.out.println("Area of rectangle: " + rectangle.area());
+    }
+}
